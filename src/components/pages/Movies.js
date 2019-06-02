@@ -6,10 +6,9 @@ function Movies(){
   const [movies, setMovies] = useState(null)
 
     function request(query){
-    useEffect( () => {
-    apiRequest(query).then( data => setMovies(data.Search));
-    },[]);
-  }  
+    apiRequest(query).then( data => setMovies(data.Search))
+    };
+    
 
   function renderMovies(){
     return (movies && movies.map((item) => (
